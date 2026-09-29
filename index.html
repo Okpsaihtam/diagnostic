@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Gestionnaire de tâches</title>
+</head>
+
+<body>
+    <header>
+        <h1>Mes tâches</h1>
+    </header>
+    <main>
+        <form id="task-form">
+            <label for="task-title">Titre de la tâche</label>
+            <input type="text" id="task-title" placeholder="Ex : Réviser le JavaScript" required>
+            <label for="task-priority">Priorité</label>
+            <select id="task-priority">
+                <option value="low">Basse</option>
+                <option value="medium" selected>Moyenne</option>
+                <option value="high">Haute</option>
+            </select>
+            <button type="submit">Ajouter</button>
+        </form>
+        <p id="task-count">0 tâche</p>
+        <ul id="task-list"></ul>
+    </main>
+</body>
+
+</html>
