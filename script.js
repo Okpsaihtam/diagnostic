@@ -4,10 +4,12 @@ const priorityInput = document.getElementById('task-priority');
 const taskCount = document.getElementById('task-count');
 const taskList = document.getElementById('task-list');
 
+
 taskForm.addEventListener('submit', function (event) {
+    event.preventDefault();
     const title = titleInput.value.trim();
     const priority = priorityInput.value;
-    event.preventDefault();
-    console.log(title);
-    console.log(priority);
+    const taskItem = document.createElement('li');
+    taskItem.textContent = title;
+    taskList.append(taskItem);
 });  
