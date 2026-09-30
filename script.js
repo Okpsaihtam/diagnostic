@@ -12,4 +12,6 @@ taskForm.addEventListener('submit', function (event) {
     const taskItem = document.createElement('li');
     taskItem.textContent = title;
     taskList.append(taskItem);
+    taskForm.reset();
+    titleInput.focus();
 });  
