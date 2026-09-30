@@ -14,4 +14,10 @@ taskForm.addEventListener('submit', function (event) {
     taskList.append(taskItem);
     taskForm.reset();
     titleInput.focus();
+    const count = taskList.children.length;
+    let label = "tâche";
+    if (count > 1) {
+        label = "tâches";
+    }
+    taskCount.textContent = count + " " + label;
 });  
