@@ -17,7 +17,9 @@ taskForm.addEventListener('submit', function (event) {
     const taskItem = document.createElement('li');
     taskItem.textContent = title;
     const taskPriority = document.createElement('span');
-    taskPriority.textContent = " (" + priorityLabels[priority] + ")";
+    taskPriority.textContent = priorityLabels[priority];
+    taskPriority.classList.add('priority');
+    taskPriority.classList.add('priority-' + priority);
     taskItem.append(taskPriority);
     taskList.append(taskItem);
     taskForm.reset();
