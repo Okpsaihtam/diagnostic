@@ -6,7 +6,7 @@
 
 body {
     font-family: system-ui, sans-serif;
-    background-color:#9b9797;
+    background-color:#f4f6fb;
     color: #1f2937;
     padding-inline: 1rem;
 }
@@ -84,4 +84,19 @@ button:hover {
     font-weight: bold;
     padding: 0.2rem 0.6rem;
     border-radius: 999px;
+}
+
+.priority-low {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.priority-medium {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.priority-high {
+    background-color: #fee2e2;
+    color: #991b1b;
 }
