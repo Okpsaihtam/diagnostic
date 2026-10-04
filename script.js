@@ -4,9 +4,9 @@ const priorityInput = document.getElementById('task-priority');
 const taskCount = document.getElementById('task-count');
 const taskList = document.getElementById('task-list');
 const priorityLabels = {
-    low : "Basse",
-    medium : "Moyenne",
-    high : "Haute",
+    low: "Basse",
+    medium: "Moyenne",
+    high: "Haute",
 };
 
 
@@ -21,6 +21,10 @@ taskForm.addEventListener('submit', function (event) {
     taskPriority.classList.add('priority');
     taskPriority.classList.add('priority-' + priority);
     taskItem.append(taskPriority);
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = "Supprimer";
+    deleteButton.classList.add('delete-button');
+    taskItem.append(deleteButton);
     taskList.append(taskItem);
     taskForm.reset();
     titleInput.focus();
