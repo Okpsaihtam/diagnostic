@@ -9,7 +9,14 @@ const priorityLabels = {
     high: "Haute",
 };
 
-
+function updateTaskCount() {
+    const count = taskList.children.length;
+    let label = "tâche";
+    if (count > 1) {
+        label = "tâches";
+    }
+    taskCount.textContent = count + " " + label;
+}
 taskForm.addEventListener('submit', function (event) {
     event.preventDefault();
     const title = titleInput.value.trim();
@@ -24,14 +31,14 @@ taskForm.addEventListener('submit', function (event) {
     const deleteButton = document.createElement('button');
     deleteButton.textContent = "Supprimer";
     deleteButton.classList.add('delete-button');
+    deleteButton.addEventListener('click', function(){
+        taskItem.remove();
+        updateTaskCount();
+    });
+
     taskItem.append(deleteButton);
     taskList.append(taskItem);
     taskForm.reset();
     titleInput.focus();
-    const count = taskList.children.length;
-    let label = "tâche";
-    if (count > 1) {
-        label = "tâches";
-    }
-    taskCount.textContent = count + " " + label;
+    updateTaskCount();
 });  
